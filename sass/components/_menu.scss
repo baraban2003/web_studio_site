@@ -32,12 +32,6 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-
-.menu-container {
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
@@ -54,100 +48,56 @@
       left: 0;
       width: 100%;
       height: 100%;
+      padding: 48px 40px;
     }
   }
+}
 
 
+.site-menu__link {
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    @include textDecoration();
+    color: $title-text-color;
+  }
+}
 
-  /*  .header__navigation {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    } */
+.site-menu__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+}
 
-  /*  .site-menu {
-      @include centeredFlex();
-      margin-left: 88px;
+.site-menu__item:last-child {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
+}
 
-      &__item:not(:last-child) {
-        margin-right: 50px;
-      }
-    } */
+.contacts__link {
+  @media screen and (max-width: 767px) {
+    @include textDecoration();
+    color: $accent-color;
 
-  /* .site-menu__link {
-      position: relative;
-      color: $title-text-color;
-      font-weight: 500;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      display: block;
-      @include textDecoration();
+  }
+}
 
-      padding-top: 32px;
-      transition: color $transition-rule;
+.contacts__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
 
-      &::after {
-        content: "";
-        left: 0;
-        bottom: 0;
+.contacts {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
 
-        display: block;
-        width: 100%;
-        height: 5px;
-        margin-top: 32px;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
 
-        background-color: $accent-color;
-        border-radius: 2px;
-        opacity: 0;
-        transition: opacity $transition-rule;
-      }
-
-      &:hover,
-      &:focus {
-        color: $accent-color;
-        outline: none;
-      }
-
-      &:hover::after,
-      &:focus::after {
-        opacity: 1;
-      }
-
-      &--current {
-        color: $accent-color;
-      }
-    } */
-
-  /* .contacts {
-
-      &__icon {
-        margin-right: 10px;
-        color: $primary-text-color;
-      }
-
-      &__item:not(:last-child) {
-        margin-right: 50px;
-      }
-    }
-
-    .contacts__link {
-      @include textDecoration();
-      color: $primary-text-color;
-      fill: $primary-text-color;
-      font-weight: 500;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      transition: color $transition-rule, fill $transition-rule;
-
-      @include centeredFlex();
-
-      &:hover,
-      &:focus {
-        color: $accent-color;
-        fill: $accent-color;
-        outline: none;
-      }
-
-    } */
-
+  }
 }
