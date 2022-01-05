@@ -96,6 +96,8 @@ textarea {
 /* @include textDecoration(); */
 .header {
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header__navigation {
