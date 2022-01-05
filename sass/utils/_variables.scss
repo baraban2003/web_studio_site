@@ -1,0 +1,42 @@
+    /* colors */
+    $primary-text-color: #757575;
+    $title-text-color: #212121;
+    $accent-color: #2196f3;
+    $portfolio-hover-color: rgba(33, 150, 243, 0.9);
+    $primary-white-color: #ffffff;
+    $main-backround-color: #e5e5e5;
+    $secondary-background-color: #2f303a;
+    $full-black: #000000;
+    $color-footer-links: rgba(255, 255, 255, 0.6);
+    $background-ourteam-button: #f5f4fa;
+    $color-padding-bottom: #ececec;
+    $color-border-items: #eeeeee;
+    $color-for-icons: #afb1b8;
+    $icon-background: rgba(255, 255, 255, 0.1);
+    $border-color: rgba(255, 255, 255, 0.3);
+    $border-modal-input: rgba(33, 33, 33, 0.2);
+    $backdrop-background: rgba(0, 0, 0, 0.2);
+    $placeholder-modal-color: rgba(117, 117, 117, 0.5);
+    $background-directions-section: rgba(47, 48, 58, 0.8);
+
+    /* shadow */
+    $shadow-effect: rgba(0, 0, 0, 0.15);
+    $shadow-modal-icon: rgba(0, 0, 0, 0.1);
+    $modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    $portfolio-buttons_shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    $portfolio-hover-effect-shadow: 1px 4px 6px 0px #00000029,
+    0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
+
+    /* fonts */
+    $logo-font: "Raleway",
+    sans-serif;
+    $main-font: "Roboto",
+    sans-serif;
+    /* transition-rule */
+    $transition-rule: 250ms cubic-bezier(0.4, 0, 0.2, 1);

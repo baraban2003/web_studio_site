@@ -1,0 +1,14 @@
+@mixin centeredFlex($type: flex, $align: center, $justify: center) {
+  display: $type;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/* @include centeredFlex(); */
+
+@mixin textDecoration() {
+  text-decoration: none;
+  outline: none;
+}
+
+/* @include textDecoration(); */

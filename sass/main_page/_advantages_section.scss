@@ -1,0 +1,33 @@
+.advantages {
+    &__name {
+        display: none;
+    }
+
+    &__all-groups {
+        @include centeredFlex($align: left, $justify: space-between);
+    }
+
+    &__icons {
+        background-color: $background-ourteam-button;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        @include centeredFlex();
+        padding: 25px 100px;
+    }
+
+    &__title {
+        color: $title-text-color;
+        font-weight: bold;
+        line-height: 1.14;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 24px;
+
+        width: 270px;
+        height: 75px;
+    }
+}

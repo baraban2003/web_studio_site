@@ -1,0 +1,26 @@
+.header__logo--web,
+.footer__logo--web {
+    color: $accent-color;
+    font-family: $logo-font;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+
+    @include textDecoration();
+}
+
+.header__logo--studio {
+    color: $full-black;
+    outline: none;
+}
+
+
+.footer__logo--studio {
+    color: $primary-white-color;
+}
+
+.footer__logo--web {
+    display: block;
+    margin-bottom: 20px;
+}

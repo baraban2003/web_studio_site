@@ -1,0 +1,48 @@
+.team {
+    background-color: $background-ourteam-button;
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__name {
+        color: $title-text-color;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__member {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__participant {
+        color: $title-text-color;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+
+    &__position {
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+
+        padding-top: 10px;
+    }
+
+    &__item {
+        background-color: $primary-white-color;
+        box-shadow: $modal-shadow;
+        border-radius: 0px 0px 4px 4px;
+    }
+}

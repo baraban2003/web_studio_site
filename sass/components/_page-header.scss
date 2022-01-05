@@ -1,0 +1,99 @@
+@import "../utils/mixins";
+
+.header {
+    @include centeredFlex();
+    box-sizing: inherit;
+
+    &__navigation {
+        @include centeredFlex();
+    }
+}
+
+.site-menu {
+    @include centeredFlex();
+    margin-left: 93px;
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.site-menu__link {
+    position: relative;
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: block;
+    @include textDecoration();
+
+    padding-top: 32px;
+    transition: color $transition-rule;
+
+    &::after {
+        content: "";
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-top: 32px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity $transition-rule;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        outline: none;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        opacity: 1;
+    }
+
+    &--current {
+        color: $accent-color;
+    }
+
+}
+
+.contacts {
+    @include centeredFlex();
+    margin-left: auto;
+
+
+    &__icon {
+        margin-right: 10px;
+        color: $primary-text-color;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.contacts__link {
+    @include textDecoration();
+    color: $primary-text-color;
+    fill: $primary-text-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color $transition-rule, fill $transition-rule;
+
+    @include centeredFlex();
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+        outline: none;
+    }
+
+}

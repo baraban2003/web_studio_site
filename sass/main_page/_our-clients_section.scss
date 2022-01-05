@@ -1,0 +1,35 @@
+.our-clients__title {
+    text-align: center;
+    color: $title-text-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+}
+
+.our-clients__block {
+    list-style: none;
+    display: flex;
+}
+
+.our-clients__item:not(:last-child) {
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.our-clients__link {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    @include centeredFlex();
+    fill: $color-for-icons;
+    transition: border $transition-rule, fill $transition-rule;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $accent-color;
+        fill: $accent-color;
+        outline: none;
+    }
+}

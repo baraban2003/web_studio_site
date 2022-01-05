@@ -1,0 +1,224 @@
+.modal {
+    padding: 40px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    min-height: 581px;
+    min-width: 528px;
+    box-shadow: $modal-shadow;
+    border-radius: 4px;
+
+    background-color: $primary-white-color;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform $transition-rule;
+
+    &__button--close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .backdrop--is-hidden & {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.modal__icon {
+    margin: 8px;
+    padding: 6px;
+    border: 1px solid $shadow-modal-icon;
+    border-radius: 50%;
+    transition: fill $transition-rule;
+
+    &:hover {
+        fill: $accent-color;
+        cursor: pointer;
+    }
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $backdrop-background;
+
+    opacity: 1;
+
+    transition: opacity $transition-rule;
+
+    &--is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* Form modal */
+.contacts-form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(-n + 4) {
+        margin-bottom: 10px;
+    }
+}
+
+.contacts-form__name {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.contacts-form__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 12px;
+
+    margin-bottom: 14px;
+    transition: fill $transition-rule;
+}
+
+.contacts-form__comment {
+    height: 120px;
+    border: 1px solid $border-modal-input;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: border $transition-rule;
+    padding: 12px 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $accent-color;
+    }
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: $placeholder-modal-color;
+    }
+}
+
+.contacts-form__title {
+    @include centeredFlex();
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: bold;
+    color: $title-text-color;
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+}
+
+.contacts-form__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked+.contacts-form__agreement {
+        transform: scale(1.2);
+        border-color: transparent;
+        background-color: $accent-color;
+        background-image: url("../images/checkbox.svg");
+
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+    }
+
+    &--input {
+        @include centeredFlex();
+        margin-bottom: 30px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}
+
+.contacts-form__terms {
+    color: $accent-color;
+    margin-left: 4px;
+
+    &--open {
+        color: $accent-color;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}
+
+.contacts-form__agreement {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+}
+
+.contacts-form__button {
+    @include centeredFlex();
+
+    &--submit {
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        font-weight: bold;
+        @include centeredFlex();
+        width: 200px;
+        height: 50px;
+        background-color: $accent-color;
+        color: $primary-white-color;
+        box-shadow: 0px 4px 4px $shadow-effect;
+        border-radius: 4px;
+        border: 1px solid transparent;
+    }
+}
+
+/* Form focus */
+.contacts-form__input {
+    &:nth-child(-n + 3) {
+        height: 40px;
+        border: 1px solid $border-modal-input;
+        border-radius: 4px;
+        padding-left: 42px;
+        transition: border $transition-rule;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus~.contacts-form__image {
+        fill: $accent-color;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $accent-color;
+    }
+}
+
+.contacts-form__button--submit:hover {
+    cursor: pointer;
+}
