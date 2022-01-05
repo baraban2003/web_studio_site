@@ -35,7 +35,6 @@ ul {
 }
 
 header {
-    background-color: $primary-white-color;
     border-bottom: 1px solid $color-padding-bottom;
     max-width: 1600px;
 
@@ -62,11 +61,21 @@ footer {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
     box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
 
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1140px) {
+        width: 1200px;
+    }
 }
 
 /* Form modal */
