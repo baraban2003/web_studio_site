@@ -1,3 +1,4 @@
+/* Hamburger menu */
 .menu-button {
   display: inline-flex;
   margin: 0;
@@ -14,6 +15,15 @@
     display: block;
   }
 
+  &.is-open .menu-button__icon-cross:hover,
+  &.is-open .menu-button__icon-cross:focus {
+    fill: $accent-color;
+  }
+
+  .menu-button__icon-menu:hover {
+    fill: $accent-color;
+  }
+
   &.is-open {
     display: block;
     position: fixed;
@@ -26,6 +36,7 @@
     display: none;
   }
 }
+
 
 .menu-button__icon-cross {
   display: none;
@@ -44,11 +55,15 @@
       background-color: $primary-white-color;
 
       position: fixed;
+      overflow: hidden;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       padding: 48px 40px;
+
+      transform: translate(0, 0) scale(1);
+      transition: transform $transition-rule;
     }
   }
 }
@@ -62,7 +77,12 @@
     letter-spacing: 0.02em;
     @include textDecoration();
     color: $title-text-color;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
+
 }
 
 .site-menu__item:not(:last-child) {
@@ -77,27 +97,75 @@
   }
 }
 
-.contacts__link {
-  @media screen and (max-width: 767px) {
-    @include textDecoration();
-    color: $accent-color;
-
-  }
-}
-
-.contacts__icon {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
+/* Contacts */
 
 .contacts {
-  display: flex;
-  flex-direction: column;
-  flex-direction: column-reverse;
+  @media screen and (max-width: 767px) {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
+    &__item:last-child {
+      margin-bottom: 32px;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.18;
+    }
 
+
+    &__icon {
+      display: none;
+    }
+
+    &__phone {
+      @include textDecoration();
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+    }
+
+    &__mail {
+      @include textDecoration();
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $primary-text-color;
+
+    }
+  }
+}
+
+/* Menu socialnetworks */
+
+.header-socialnetworks {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 64px;
+
+    &__link {
+      @include textDecoration();
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+    }
+
+    &__list:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__list:not(:first-child) {
+      padding-left: 10px;
+    }
   }
 }
