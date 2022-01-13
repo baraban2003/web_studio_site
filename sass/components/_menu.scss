@@ -84,6 +84,10 @@
     }
   }
 
+  &--current {
+    color: $accent-color;
+  }
+
 }
 
 .site-menu__item:not(:last-child) {

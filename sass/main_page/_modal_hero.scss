@@ -7,6 +7,12 @@
 
     min-height: 581px;
     min-width: 528px;
+
+    @media screen and (max-width: 1199px) {
+        min-height: 609px;
+        min-width: 450px;
+    }
+
     box-shadow: $modal-shadow;
     border-radius: 4px;
 
@@ -118,6 +124,7 @@
 
 .contacts-form__title {
     @include centeredFlex();
+    text-align: center;
     font-size: 20px;
     line-height: 1.15;
     font-weight: bold;
@@ -152,17 +159,11 @@
         margin-bottom: 30px;
         line-height: 1.71;
         letter-spacing: 0.03em;
-    }
-}
 
-.contacts-form__terms {
-    color: $accent-color;
-    margin-left: 4px;
-
-    &--open {
-        color: $accent-color;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
+        @media screen and (max-width: 1199px) {
+            font-size: 12px;
+            line-height: 1.17;
+        }
     }
 }
 
@@ -174,6 +175,28 @@
 
     border: 2px solid $title-text-color;
     border-radius: 2px;
+
+
+}
+
+.contacts-form__terms {
+    color: $accent-color;
+    margin-left: 4px;
+
+
+
+    &--open {
+        color: $accent-color;
+
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 12px;
+            line-height: 1.17;
+        }
+
+    }
 }
 
 .contacts-form__button {
