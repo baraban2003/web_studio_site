@@ -1,7 +1,6 @@
 .modal {
     padding: 40px;
     position: absolute;
-
     top: 50%;
     left: 50%;
 
@@ -11,6 +10,7 @@
     @media screen and (max-width: 1199px) {
         min-height: 609px;
         min-width: 450px;
+
     }
 
     box-shadow: $modal-shadow;

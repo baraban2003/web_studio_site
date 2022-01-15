@@ -51,6 +51,7 @@
     left: 0;
     width: 100%;
 
+
     &.is-open {
       display: block;
       background-color: $primary-white-color;
@@ -63,9 +64,11 @@
       height: 100%;
       padding: 48px 40px;
 
+
       transform: translate(0, 0) scale(1);
       transition: transform $transition-rule;
     }
+
   }
 }
 

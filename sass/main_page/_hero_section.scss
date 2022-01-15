@@ -5,7 +5,7 @@
     margin: 0 auto;
     background-size: cover;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767.5px) {
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
@@ -23,7 +23,7 @@
         }
     }
 
-    @media screen and (min-width: 481px) and (max-width:768px) {
+    @media screen and (min-width: 768px) {
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
@@ -41,7 +41,7 @@
         }
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1200px) {
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),

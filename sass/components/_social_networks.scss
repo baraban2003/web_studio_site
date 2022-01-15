@@ -1,15 +1,23 @@
 .socialnetworks {
     display: flex;
     padding: 16px 32px 0 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons__block {
+    justify-content: center;
 }
 
 .socialnetworks__item {
     display: flex;
     list-style: none;
 
+
     &:not(:last-child) {
         margin-right: 10px;
     }
+
 }
 
 .socialnetworks__icon {
@@ -38,7 +46,10 @@
 
 /* Footer - Social networks */
 .footer-icons {
-    margin-right: 93px;
+    @media screen and (min-width: 1200px) {
+
+        margin-right: 93px;
+    }
 
     &__title {
         color: $primary-white-color;
@@ -47,11 +58,16 @@
         font-size: 14px;
         line-height: 1.14;
         margin-bottom: 20px;
+
     }
 
     &__block {
         display: flex;
         list-style: none;
+
+        @media screen and (min-width: 480px) {
+            justify-content: center;
+        }
     }
 
     &__item:not(:last-child) {
@@ -61,6 +77,8 @@
 }
 
 .footer-icons__link {
+
+
     @extend .socialnetworks__icon;
 
     background-color: $icon-background;

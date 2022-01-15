@@ -1,0 +1,187 @@
+.activity__title {
+    display: none;
+}
+
+.activity__button {
+    color: $title-text-color;
+    background-color: $background-ourteam-button;
+    box-shadow: 0px 0px 0px transparent;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 22px;
+
+    transition: color $transition-rule,
+        background-color $transition-rule, box-shadow $transition-rule;
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: $primary-white-color;
+        background-color: $accent-color;
+        box-shadow: $portfolio-buttons_shadow;
+        outline: none;
+    }
+}
+
+.filters-result__item {
+    /*  min-height: 404px; */
+    border: 1px solid $color-border-items;
+    box-shadow: 0 transparent;
+
+    transition: box-shadow $transition-rule;
+
+    &:hover,
+    &:focus {
+        box-shadow: $portfolio-hover-effect-shadow;
+    }
+
+    &:hover .filters-result__cover {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.filters-result__link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+
+.filters-result__directions {
+    color: $primary-text-color;
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.filters-result__text-block {
+    padding: 20px 24px;
+}
+
+.filters-result__title {
+    padding-bottom: 4px;
+    color: $title-text-color;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+/* Синий оверлей с текстом на карточках страницы Портфолио */
+.filters-result__picture-block {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1
+}
+
+.filters-result__cover {
+    text-decoration: none;
+    position: absolute;
+    padding: 63px 24px;
+    background-color: $portfolio-hover-color;
+    color: $primary-white-color;
+    font-size: 18px;
+    line-height: 1.56;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    opacity: 0;
+
+    transition: opacity $transition-rule, transform $transition-rule;
+}
+
+@media screen and (min-width: 480px) {
+    .activity__filters {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+
+    }
+
+    .filters-result__item,
+    .filters-result__picture-block {
+        width: 450px;
+    }
+
+    .filters-result__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .activity__item {
+        margin-bottom: 15px;
+    }
+
+    .activity__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .activity__filters {
+        @include centeredFlex();
+    }
+
+    .filters-result__picture-block {
+        height: 294px;
+    }
+
+    .filters-result {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-left: -30px;
+    }
+
+    .filters-result__item {
+        width: 354px;
+        margin-left: 30px;
+    }
+
+    .filters-result__picture-block {
+        width: 354px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filters-result__picture-block {
+        width: 370px;
+        height: 294px;
+    }
+
+    .activity__item {
+        margin-bottom: 0;
+    }
+
+    /* top filters */
+    .activity__filters {
+        @include centeredFlex();
+        margin-bottom: 50px;
+    }
+
+    .filters-result__item {
+        width: 370px;
+        height: 404px;
+
+    }
+
+    /* filterd items */
+    .filters-result {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filters-result__item {
+        flex-basis: calc(100% / 3 - 30px);
+        width: 370px;
+    }
+}
