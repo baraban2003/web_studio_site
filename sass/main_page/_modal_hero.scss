@@ -4,12 +4,15 @@
     top: 50%;
     left: 50%;
 
-    min-height: 581px;
-    min-width: 528px;
+    max-height: 581px;
+    max-width: 528px;
+    width: 100%;
+    height: 100%;
 
     @media screen and (max-width: 1199px) {
-        min-height: 609px;
-        min-width: 450px;
+        max-height: 609px;
+        max-width: 450px;
+        width: 100%;
 
     }
 
@@ -143,6 +146,7 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 
+
     &:checked+.contacts-form__agreement {
         transform: scale(1.2);
         border-color: transparent;
@@ -159,29 +163,29 @@
         margin-bottom: 30px;
         line-height: 1.71;
         letter-spacing: 0.03em;
+        /* white-space: nowrap; */
+
 
         @media screen and (max-width: 1199px) {
             font-size: 12px;
             line-height: 1.17;
+
         }
     }
 }
 
 .contacts-form__agreement {
-    display: inline-block;
     width: 16px;
     height: 15px;
-    margin-right: 7px;
+    margin-right: 10px;
 
     border: 2px solid $title-text-color;
     border-radius: 2px;
-
-
 }
 
 .contacts-form__terms {
-    color: $accent-color;
-    margin-left: 4px;
+    /* color: $accent-color; */
+    /* margin-left: 4px; */
 
 
 
@@ -190,6 +194,7 @@
 
         line-height: 1.71;
         letter-spacing: 0.03em;
+
 
         @media screen and (max-width: 1199px) {
             font-size: 12px;

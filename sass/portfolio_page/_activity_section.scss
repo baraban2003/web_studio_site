@@ -83,7 +83,10 @@
 .filters-result__cover {
     text-decoration: none;
     position: absolute;
-    padding: 63px 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+
     background-color: $portfolio-hover-color;
     color: $primary-white-color;
     font-size: 18px;
@@ -100,37 +103,37 @@
     transition: opacity $transition-rule, transform $transition-rule;
 }
 
-@media screen and (min-width: 480px) {
+/* @media screen and (max-width: 767.5px) { */
 
-    .activity__filters {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 25px;
+.activity__filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
 
-    }
-
-    .filters-result__item,
-    .filters-result__picture-block {
-        width: 450px;
-    }
-
-    .filters-result__item:not(:last-child) {
-        margin-bottom: 30px;
-    }
-
-    .activity__item {
-        margin-bottom: 15px;
-    }
-
-    .activity__item:not(:last-child) {
-        margin-right: 8px;
-    }
 }
 
+.filters-result__item,
+.filters-result__picture-block {
+    max-width: 450px;
+}
+
+.filters-result__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.activity__item {
+    margin-bottom: 15px;
+}
+
+.activity__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+
 @media screen and (min-width: 768px) {
-    img {
+    /*   img {
         height: 294px;
-    }
+    } */
 
     .activity__filters {
         @include centeredFlex();
@@ -158,10 +161,11 @@
 }
 
 @media screen and (min-width: 1200px) {
-    img {
+
+    /*   img {
         height: 294px;
     }
-
+ */
     .filters-result__picture-block {
         width: 370px;
         height: 294px;
@@ -187,6 +191,7 @@
     .filters-result {
         display: flex;
         flex-wrap: wrap;
+
     }
 
     .filters-result__item {

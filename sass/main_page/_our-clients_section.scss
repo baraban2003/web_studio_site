@@ -32,15 +32,17 @@
 @media screen and (max-width: 767.5px) {
     .our-clients__block {
         margin-bottom: -30px;
-    }
 
-    .our-clients__link {
-        min-width: 210px;
     }
 
     .our-clients__item {
+
+        max-width: calc((100% - 30px) / 2);
+        width: 100%;
         margin-bottom: 30px;
     }
+
+    .our-clients__link {}
 
     .our-clients__item:nth-child(2n+1) {
 
