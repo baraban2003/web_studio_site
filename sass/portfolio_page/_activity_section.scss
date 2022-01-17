@@ -31,7 +31,7 @@
 
 .filters-result__item {
     /*  min-height: 404px; */
-    border: 1px solid $color-border-items;
+    /* border: 1px solid $color-border-items; */
     box-shadow: 0 transparent;
 
     transition: box-shadow $transition-rule;
@@ -61,10 +61,15 @@
 
 .filters-result__text-block {
     padding: 20px 24px;
+
+    border-left: 1px solid $color-border-items;
+    border-right: 1px solid $color-border-items;
+    border-bottom: 1px solid $color-border-items;
+
 }
 
 .filters-result__title {
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     color: $title-text-color;
     font-weight: bold;
     font-size: 18px;
@@ -153,6 +158,7 @@
     .filters-result__item {
         width: 354px;
         margin-left: 30px;
+        height: 100%;
     }
 
     .filters-result__picture-block {
