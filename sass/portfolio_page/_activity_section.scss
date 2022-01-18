@@ -49,8 +49,9 @@
 
 .filters-result__link {
     text-decoration: none;
-    display: inline-block;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .filters-result__directions {
@@ -65,7 +66,7 @@
     border-left: 1px solid $color-border-items;
     border-right: 1px solid $color-border-items;
     border-bottom: 1px solid $color-border-items;
-
+    flex-grow: 1;
 }
 
 .filters-result__title {
@@ -80,7 +81,7 @@
 /* Синий оверлей с текстом на карточках страницы Портфолио */
 .filters-result__picture-block {
     position: relative;
-    height: 100%;
+
     overflow: hidden;
     z-index: -1
 }
@@ -117,14 +118,6 @@
 
 }
 
-.filters-result__item,
-.filters-result__picture-block {
-    max-width: 450px;
-}
-
-.filters-result__item:not(:last-child) {
-    margin-bottom: 30px;
-}
 
 .activity__item {
     margin-bottom: 15px;
@@ -134,6 +127,11 @@
     margin-right: 8px;
 }
 
+@media screen and (max-width: 767.5px) {
+    .filters-result__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     /*   img {
@@ -144,38 +142,29 @@
         @include centeredFlex();
     }
 
-    .filters-result__picture-block {
+    /*  .filters-result__picture-block {
         height: 294px;
-    }
+    } */
 
     .filters-result {
         display: flex;
         flex-wrap: wrap;
-
-        margin-left: -30px;
+        margin: -15px;
     }
 
     .filters-result__item {
-        width: 354px;
-        margin-left: 30px;
-        height: 100%;
+        margin: 15px;
+        flex-basis: calc((100% - 60px) / 2);
     }
 
-    .filters-result__picture-block {
-        width: 354px;
-    }
 }
 
 @media screen and (min-width: 1200px) {
 
-    /*   img {
-        height: 294px;
-    }
- */
-    .filters-result__picture-block {
+    /*  .filters-result__picture-block {
         width: 370px;
         height: 294px;
-    }
+    } */
 
     .activity__item {
         margin-bottom: 0;
@@ -187,11 +176,11 @@
         margin-bottom: 50px;
     }
 
-    .filters-result__item {
+    /* .filters-result__item {
         width: 370px;
         height: 404px;
 
-    }
+    } */
 
     /* filterd items */
     .filters-result {
@@ -202,6 +191,6 @@
 
     .filters-result__item {
         flex-basis: calc(100% / 3 - 30px);
-        width: 370px;
+        /* width: 370px; */
     }
 }

@@ -160,40 +160,42 @@ textarea {
   .site-menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .site-menu__link {
+  .site-menu__link--current {
     position: relative;
-    color: #212121;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    display: block;
     text-decoration: none;
     outline: none;
-    padding-top: 32px;
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: -1px;
   }
-  .site-menu__link::after {
+  .site-menu__link--current::after {
+    position: absolute;
     content: "";
     left: 0;
     bottom: 0;
     display: block;
     width: 100%;
     height: 5px;
-    margin-top: 32px;
     background-color: #2196f3;
     border-radius: 2px;
-    opacity: 0;
+    /*  opacity: 1; */
     -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-menu__link {
+    color: #212121;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: block;
+    margin-top: 32px;
+    padding-bottom: 32px;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: -1px;
+    text-decoration: none;
+    outline: none;
   }
   .site-menu__link:hover, .site-menu__link:focus {
     color: #2196f3;
     outline: none;
-  }
-  .site-menu__link:hover::after, .site-menu__link:focus::after {
-    opacity: 1;
   }
   .site-menu__link--current {
     color: #2196f3;
