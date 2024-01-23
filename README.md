@@ -9,7 +9,7 @@ WebStudio is a website that offers effective business solutions. It showcases th
 ## Technologies Used
 
 - HTML
-- CSS (including Normalize.css)
+- SCSS
 - JavaScript
 - SVG for icons
 - Google Fonts
